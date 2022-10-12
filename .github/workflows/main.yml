@@ -4,8 +4,6 @@ on:
   issues:
     types: [opened]
 
-env:
- MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
  
 jobs:
   assign_one_project:
@@ -13,8 +11,9 @@ jobs:
     name: Assign to One Project
     steps:
     - name: Assign NEW issues and NEW pull requests to project 2
-      uses: srggrs/assign-one-project-github-action@1.2.1
-      if: github.event.action == 'opened'
+      uses: actions/add-to-project@main
       with:
-        project: 'https://github.com/orgs/Fatima-Mato/projects/1'
-        column_name: 'New'
+          project-url: https://github.com/orgs/Fatima-Mato/projects/1
+          github-token: ${{ secrets.MY_GITHUB_TOKEN }}
+          labeled: bug, improvement
+          label-operator: OR
