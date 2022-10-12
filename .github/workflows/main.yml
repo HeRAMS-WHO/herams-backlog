@@ -17,5 +17,6 @@ jobs:
       if: github.event.action == 'opened'
       with:
         project: 'https://github.com/orgs/Fatima-Mato/projects/1'
+        column_name: 'New'
 
     
