@@ -13,7 +13,7 @@ jobs:
     - name: Assign NEW issues and NEW pull requests to project 2
       uses: actions/add-to-project@main
       with:
-          project-url: https://github.com/orgs/HeRAMS/projects/2
+          project-url: https://github.com/orgs/HeRAMS-WHO/projects/2
           github-token: ${{ secrets.PROJECT_ASSIGN_SECRET }}
           labeled: bug, improvement
           label-operator: OR
