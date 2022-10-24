@@ -15,5 +15,3 @@ jobs:
       with:
           project-url: https://github.com/orgs/HeRAMS-WHO/projects/2
           github-token: ${{ secrets.PROJECT_ASSIGN_SECRET }}
-          labeled: bug, improvement
-          label-operator: OR
