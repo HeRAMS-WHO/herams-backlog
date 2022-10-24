@@ -14,6 +14,6 @@ jobs:
       uses: actions/add-to-project@main
       with:
           project-url: https://github.com/orgs/HeRAMS/projects/2
-          github-token: ${{ secrets.MY_GITHUB_SECRET }}
+          github-token: ${{ secrets.PROJECT_ASSIGN_SECRET }}
           labeled: bug, improvement
           label-operator: OR
